@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Login Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/my-login.css">
+</head>
+<style type="text/css">
+body{
+   border-style: collapse;
+   width: 100%;
+   color: blueviolet;
+   background: grey;
+   align-content: center;
+}
+</style>
+<body>
+
+<div class="container">
+<div class="row d-flex justify-content-center mt-1">
+<div class="card p-1">
+
+  <div class="form-group">
+    <label for="uname">Username:</label>
+    <input type="text"  placeholder="Enter name" id="uname">
+  </div>
+  <div class="form-group">
+    <label for="pswrd">Password:</label>
+    <input type="password" placeholder="Enter password" id="pswrd">
+  </div>
+  <div class="form-group form-check">
+   
+  </div>
+  <button type="submit" onclick="login()" class="btn btn-primary">Login</button class="align-center"
+</form>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+      function login() {
+         var duname = "krizzia";
+         var dpswrd = "meow";
+
+         uname = document.getElementById('uname').value;
+         pswrd = document.getElementById('pswrd').value;
+
+         if (duname == uname && dpswrd == pswrd) {
+            alert("Welcome to Ucu");
+         }else if(duname != uname && dpswrd == pswrd ){
+            alert("invalid username")
+         }else if(duname == uname && dpswrd != pswrd ){
+            alert("invalid password")
+         }else {
+            alert("Access denied!");
+         } 
+      }
+
+   </script>
+
+</body>
+</html>
